@@ -494,6 +494,107 @@ h1, h2, h3 {
   font-weight: 700;
 }
 
+/* Inversion */
+.planes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.plan-card {
+  position: relative;
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 32px 28px;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+}
+
+.plan-card h3 { font-size: 1.3rem; margin-bottom: 6px; }
+
+.plan-desc {
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+.plan-precio {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.plan-precio-monto {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.1rem;
+  color: var(--sage-dark);
+  font-weight: 700;
+}
+
+.plan-precio-label {
+  color: var(--ink-soft);
+  font-size: 0.82rem;
+}
+
+.plan-mensual {
+  color: var(--gold-dark);
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 22px;
+}
+
+.plan-list {
+  list-style: none;
+  margin-bottom: 28px;
+  flex-grow: 1;
+}
+
+.plan-list li {
+  padding: 8px 0 8px 26px;
+  position: relative;
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+  border-bottom: 1px solid var(--beige-dark);
+}
+
+.plan-list li:last-child { border-bottom: none; }
+
+.plan-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--sage-dark);
+  font-weight: 700;
+}
+
+.plan-btn { text-align: center; }
+
+.plan-card-destacado {
+  border: 2px solid var(--gold);
+  transform: translateY(-10px);
+}
+
+.plan-badge {
+  position: absolute;
+  top: -14px;
+  left: 28px;
+  background: var(--gold);
+  color: var(--white);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 5px 14px;
+  border-radius: 999px;
+}
+
+.inversion-nota {
+  text-align: center;
+  color: var(--ink-soft);
+  font-size: 0.85rem;
+  margin-top: 36px;
+}
+
 /* Contacto */
 .contacto { text-align: center; }
 
@@ -539,6 +640,8 @@ h1, h2, h3 {
   .compare-grid { grid-template-columns: 1fr; }
   .fidelizacion-inner, .app-inner { grid-template-columns: 1fr; }
   .app-phone { order: -1; }
+  .planes-grid { grid-template-columns: 1fr; }
+  .plan-card-destacado { transform: none; }
 }
 
 @media (max-width: 680px) {
